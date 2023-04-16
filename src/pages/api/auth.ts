@@ -49,11 +49,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.send("Logado com sucesso")
   }
-  if (req.method === "POST") {
-    const user = await prisma.user.create({
-      data: req.body,
-    })
-
-    return res.json(user)
-  }
 }
